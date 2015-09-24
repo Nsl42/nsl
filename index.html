@@ -1,60 +1,20 @@
 <html ng-app="nslApp">
 <head>
-  <link rel="stylesheet" href="css/bootstrap.css"/>
-  <link rel="stylesheet" href="css/main.css"/>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="js/main.js"></script>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/main.css"/>
 </head>
-<body ng-controller="NslMain">
-
-  <div class="container-fluid">
-  <div class="row formadd">
-      <form class="form-horizontal">
-        <fieldset>
-
-          <!-- Form Name -->
-          <legend>Ajouter un lien</legend>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label" for="appName">Nom : </label>  
-            <div class="col-md-5">
-              <input id="appName" name="appName" type="text" placeholder="" ng-model="currApp.name" class="form-control input-md" required="">
-
-            </div>
-          </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label" for="appLink">Lien :</label>  
-            <div class="col-md-6">
-              <input id="appLink" name="appLink" type="text" placeholder="" ng-model="currApp.link" class="form-control input-md" required="">
-
-            </div>
-          </div>
-
-          <!-- Button -->
-          <div class="form-group">
-            <label class="col-md-4 control-label" for="submit"></label>
-            <div class="col-md-4">
-              <button id="submit" name="submit" ng-click="addApp()" class="btn btn-success">Ajouter</button>
-            </div>
-          </div>
-
-        </fieldset>
-      </form>
-      <div style="margin-left:5%;" class="row">
-        <h2>{{currApp.name}}</h2>
-        <h2>{{currApp.link}}</h2>
-      </div>
-
-    </div>
-    <div class="row">
-      <div ng-repeat="app in appList" class="col-md-4">
-        <h2>{{app.name}}</h2>
-        <a href="{{app.link}}"> <img src="http://fakeimg.pl/150x150" /></a>
-      </div>
-    </div>
-  </div>
+<body>
+	<div ng-view="">
+	</div>
+</body>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/requirejs/require.js"></script>
+<script src="bower_components/angular/angular-route.js"></script>
+<script src="js/main.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

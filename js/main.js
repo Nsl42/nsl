@@ -1,21 +1,8 @@
-var nslApp = angular.module('nslApp', []);
+var nslApp = angular.module('nslApp', ['ngRoute']);
+nslApp.controller('MainCtrl', function ($scope) {
+  var MainCtrl = function($scope){
+  };
 
-nslApp.controller('NslMain', function ($scope) {
-  $scope.currApp = {
-    'name' : 'exemple',
-    'link' : 'null'
-  }
-  $scope.appList = [
-    {'name': '9Gag',
-     'link': 'http://9gag.com'},
-    {'name': 'Localhost',
-     'link': 'localhost/nsl'},
-    {'name': 'Youtube',
-     'link': 'http://youtube.com'}
-  ];
-
-  $scope.addApp = function() {
-    $scope.appList.push($scope.currApp);
-        return true; 
-    }
+    return MainCtrl;
+MainCtrl.$inject = ['$scope', 'ngRoute'];
 });
